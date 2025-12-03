@@ -1,16 +1,29 @@
-# React + Vite
+# Mortgage Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a minimally viable product (MVP) built as a learning exercise to solidify my understanding of modern React development, Vite, and custom financial calculations.
 
-Currently, two official plugins are available:
+## Tools
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Framework:** React
+* **Bundler/Tooling:** Vite
+* **Styling:** Tailwind CSS
 
-## React Compiler
+## Lessons Learned & Modern Development Practices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project involved migrating from older tooling and learning the modern, efficient ways to structure a React application:
 
-## Expanding the ESLint configuration
+1.  **Modern React Compilation:**
+    * The application utilizes React v19's Compiler, which automatically handles memoization and optimization.
+    * This eliminates the need for manual caching with hooks like [`useMemo`](https://react.dev/reference/react/useMemo), allowing the compiler to manage caching of expensive calculation results between renders more efficiently.
+2.  **Migrating to Vite:**
+    * The initial architecture used Create React App (CRA), which relies on Webpack for bundling.
+    * I migrated the project to **Vite**, the modern standard for fast development and bundling, after noting that [CRA has been sunset](https://react.dev/blog/2025/02/14/sunsetting-create-react-app) as of February 2025.
+3.  **Integrating Modern Tailwind CSS (v4):**
+    * This was a major learning point. The traditional Tailwind setup that relied on generating `tailwind.config.js` and `postcss.config.js` files is no longer the recommended practice.
+    * **New Implementation:** Tailwind CSS was successfully integrated into the Vite project using the dedicated `@tailwindcss/vite` plugin.
+    * **Configuration:** The setup was finalized by adding the core directives to the global CSS file, which allows the Vite plugin to generate and inject all necessary classes during build.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+This project is still a work in progress and serves as a continuous platform for me to learn how to build modern web applications using React, Vite, Tailwind, and other essential front-end tools and frameworks.
+
+See my work here: [johnlilly.dev](johnlilly.dev)
