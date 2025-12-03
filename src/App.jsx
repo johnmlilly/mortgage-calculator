@@ -132,6 +132,8 @@ export default function MortgageCalculator() {
                   </span>
                   <input
                     type="text"
+                    inputMode="numeric"
+                    pattern="[0-9,]*"
                     value={formatNumber(loanAmount)}
                     onChange={(e) => handleLoanAmountChange(e.target.value)}
                     className="w-full pl-8 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
@@ -159,6 +161,8 @@ export default function MortgageCalculator() {
                   </span>
                   <input
                     type="text"
+                    inputMode="numeric"
+                    pattern="[0-9,]*"
                     value={formatNumber(downPayment)}
                     onChange={(e) => handleDownPaymentChange(e.target.value)}
                     className="w-full pl-8 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
@@ -339,8 +343,6 @@ export default function MortgageCalculator() {
             </div>
           </div>
         )}
-
-        
       </div>
     </div>
   );
