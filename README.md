@@ -18,8 +18,8 @@ This project involved migrating from older tooling and learning the modern, effi
 2.  **Migrating to Vite:**
     * The initial architecture used Create React App (CRA), which relies on Webpack for bundling.
     * I migrated the project to **Vite**, the modern standard for fast development and bundling, after noting that [CRA has been sunset](https://react.dev/blog/2025/02/14/sunsetting-create-react-app) as of February 2025.
-3.  **Integrating Modern Tailwind CSS (v4):**
-    * This was a major learning point. The traditional Tailwind setup that relied on generating `tailwind.config.js` and `postcss.config.js` files is no longer the recommended practice.
+3.  **Integrating Tailwind CSS:**
+    * The traditional Tailwind setup that relied on generating `tailwind.config.js` and `postcss.config.js` files is no longer the recommended practice.
     * **New Implementation:** Tailwind CSS was successfully integrated into the Vite project using the dedicated `@tailwindcss/vite` plugin.
     * **Configuration:** The setup was finalized by adding the core directives to the global CSS file, which allows the Vite plugin to generate and inject all necessary classes during build.
 
