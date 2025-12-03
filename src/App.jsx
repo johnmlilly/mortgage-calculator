@@ -340,18 +340,7 @@ export default function MortgageCalculator() {
           </div>
         )}
 
-        {/* Footer CTA */}
-        <div className="mt-8 bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
-            Ready to Buy Your Dream Home?
-          </h3>
-          <p className="text-gray-600 mb-4">
-            Connect with top-rated lenders and get pre-approved today
-          </p>
-          <button className="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-8 rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-md">
-            Compare Mortgage Rates
-          </button>
-        </div>
+        
       </div>
     </div>
   );
