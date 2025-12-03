@@ -24,8 +24,7 @@ export default function MortgageCalculator() {
   // Handle loan amount change with down payment validation
   const handleLoanAmountChange = (value) => {
     const numValue = typeof value === 'string' ? parseNumber(value) : value;
-    const clampedValue = Math.max(10000, Math.min(10000000, numValue)); // $10k-$10M
-    setLoanAmount(clampedValue);
+    setLoanAmount(numValue);
     
     // If down payment exceeds new loan amount, adjust it
     if (downPayment > numValue) {
